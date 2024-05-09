@@ -27,7 +27,8 @@ function Countries(){
     useEffect(() => { 
         fetch(API_URL)
         .then((response) => response.json())
-        .then((data) => setCountries(data));
+        .then((data) => setCountries(data))
+        .catch((error) => console.error("Error happening: ", error));
     }, []);
     return (
         <div 
